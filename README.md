@@ -9,5 +9,6 @@ pip install django
 cd c:\projeto\globallabs\
 pip freeze
 pip freeze --local > requirements.txt
+python manage.py runserver
 ```
-run no arquivo manage.py
+
