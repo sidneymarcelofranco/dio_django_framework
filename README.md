@@ -113,7 +113,37 @@ Note:
 * Este pacote cria as tabelas de usuários e permissões, onde fica mais fácil controlar as autenticações e permissões.
 * Para se utilizar da autenticação padrão do Django é necessãrio que o pacote esteja entre os Apps instalados no settings do projeto (essa configuração já vem pronta pro default)
 
+# function authenticate
+* A função authenticate do pacote django.contrib.auth é responsável por criar uma sessão par ao usuário autenticado.
+* Importação: 
+``` from django.contrib.auth import login  ```
+* utilização
+``` login(request, user)  ```
+# logout
+* A função logout do pacote django.contrib.auth é responsável por limpar os dados do usuário da sessão.
+* Importação: 
+``` from django.contrib.auth import authenticate, login, logout  ```
+* utilização
+``` user = logout (request)  ```
 
+# login required
+* A função login_required do pacote django.contrib.auth é responsável por autenticar o usuário.
+* ELa é um decorador que é utilizado em todas as funções/vies que necessitam de um usuário logado/autenticado para serem acessadas.
+* Importação: 
+``` from django.contrib.auth.decorators import login.required  ```
+* utilização
+``` @login_required(login_url='/login/') 
+    def lista_eventos(request)
+```
+# Decoradores
+* São funçoes que são usadas sobre outras funções.
+* Os decoradores são usados para extrair um código comum que deve ser aplicado para diversas funções
+* A função login_required do pacote django.contrib.auth por exemplo, usada como decorador, faz com que seja realizada uma validação comum (usuário logado) para que em caso de usuário não logado, impeça a execução da função a qual ela está decorando.
+
+
+
+
+  
 
 
 
