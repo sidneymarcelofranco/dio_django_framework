@@ -78,10 +78,7 @@ Exemplo de consulta
 ## TEMPLATES
 * Responsável por armazenar os arquivos HTML
 * o diretório templates é o diretório padrão para armazenarmos todo o conteúdo HTML da nossa aplicação.
-
-
-
-
+```
 cd .virtualenv
 .\Scripts\activate
 cd c:\Projetos\globalabs
@@ -92,10 +89,12 @@ django-admin startapp core
 ls
 ## migração de all app e all number of migrations
 python manage.py migrate
+```
 ## migração por nome do app e por numero da migração
-       Comando           app  numero da migração (pasta migrations referente a o arquivo 0001_intial.py )
+```
 python manage.py migrate core 0001
 python manage.py createsuperuser --username admin
+```
 Note: 
   1. migrate, which is responsible for applying migrations, as well as unapplying and listing their status.
   2. makemigrations, which is responsible for creating new migrations based on the changes you have made to your models.
